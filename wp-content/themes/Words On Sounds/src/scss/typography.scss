@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "AcuminVariableConcept";
+    src: url("../src/fonts/AcuminVariableConcept.otf");
+}
+
+@font-face {
+    font-family: "Gothic Bold";
+    src: url("../src/fonts/Got725Bd.ttf");
+}
+
+@font-face {
+    font-family: "Gibson Bold";
+    src: url("../src/fonts/gibson-bold.ttf");
+}
+
+@font-face {
+    font-family: "Kanit-Bold";
+    src: url("../src/fonts/Kanit-Bold.ttf");
+}
+
+$font-fallback: Arial, sans-serif;
+$font-menu: "Kanit-Bold", $font-fallback;
+
+@mixin text-menu {
+    font-family: $font-menu;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+@mixin text-menu-mobile {
+    font-family: $font-menu;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+@mixin text-menu-footer {
+    font-family: $font-menu;
+    font-size: 18px;
+    text-transform: uppercase;
+}
