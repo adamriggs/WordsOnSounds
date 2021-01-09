@@ -104,9 +104,13 @@
         <section class="home__tertiary">
 
             <h4>About</h4>
-            <img src="<?php echo $about_image; ?>">
-            <h5><?php echo $about_title; ?></h5>
-            <p><?php echo $about_body; ?></p>
+            <div class="row">
+                <img class="col-4" src="<?php echo $about_image; ?>">
+                <div class="col-8">
+                    <h5><?php echo $about_title; ?></h5>
+                    <p><?php echo $about_body; ?></p>
+                </div>
+            </div>
 
         </section>
 
