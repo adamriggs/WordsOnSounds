@@ -1,11 +1,38 @@
 .featured {
+    h4 {
+        margin: $spacer-less 0 24px;
+    }
+
     .featured__title {
+        margin-bottom: $spacer-less;
         text-transform: uppercase;
 
-        h1 { display: inline-block; }
+        h1 {
+            display: inline-block;
+        }
     }
 
     .featured__excerpt {
         p { display: inline-block; }
     }
+}
+
+.post__tile {
+    .background-image {
+        height: 310px;
+        margin-bottom: $spacer-less;
+        // padding-bottom: 78%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    &:hover {
+        h3 { color: $red; }
+    }
+}
+
+.post__row a {
+    text-align: right;
 }

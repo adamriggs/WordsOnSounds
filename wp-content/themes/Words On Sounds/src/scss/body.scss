@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "AcuminVariableConcept", $font-fallback;
+    font-style: "Condensed Medium";
     font-size: 19px;
     margin: 0 auto;
     max-width: $max-width;
@@ -107,9 +108,10 @@ button {
     font-weight: 600;
     line-height: 14px;
     margin: 50px 0;
-    padding: 10px 60px;
+    padding: 12px 30px 12px 15px;
     text-transform: uppercase;
     transition: background-color $transition-time, border $transition-time;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
 
     &:hover {
         background-color: $red;
@@ -206,22 +208,6 @@ img.aligncenter {
         }
     }
 }
-
-// .section__title {
-//     display: flex;
-//     width: 100%;
-
-//     div {
-//         flex: 1 1 auto;
-//         width: auto;
-//     }
-
-//     .section__title__text {
-//         align-self: center;
-//         flex: 0 1 auto;
-//         max-width: 80vw;
-//     }
-// }
 
 @media only screen and (max-width: $tablet-break) {
     .hero__text {

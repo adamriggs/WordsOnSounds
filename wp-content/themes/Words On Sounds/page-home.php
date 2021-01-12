@@ -56,7 +56,7 @@
                 include get_template_directory() . '/inc/post-row.php';
             ?>
 
-            <div class="row between">
+            <div class="home__secondary__singles row between">
 
                 <div class="col-3">
                     <?php 
@@ -105,8 +105,8 @@
 
             <h4>About</h4>
             <div class="row">
-                <img class="col-4" src="<?php echo $about_image; ?>">
-                <div class="col-8">
+                <img class="home__tertiary__photo col-4" src="<?php echo $about_image; ?>">
+                <div class="home__tertiary__text col-8">
                     <h5><?php echo $about_title; ?></h5>
                     <p><?php echo $about_body; ?></p>
                 </div>

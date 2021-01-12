@@ -1,3 +1,20 @@
 .home {
+    .home__secondary {
+        h4 {
+            margin-bottom: $spacer-less;
+            text-align: center;
+        }
+    }
 
+    .home__secondary__singles { margin-top: $spacer-more; }
+
+    .home__tertiary {
+        h4 { margin-bottom: $spacer-less; }
+
+        h5 { font-size: 48px; }
+
+        .home__tertiary__photo {
+            padding-right: $spacer-less;
+        }
+    }
 }

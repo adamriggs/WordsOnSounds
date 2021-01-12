@@ -8,9 +8,9 @@
             echo $category[0]->cat_name;
         }
     ?></h4>
-    <div class="featured__title">
-        <h1><?php the_title(); ?></h1>
-        <span>By <?php the_author(); ?></span>
+    <div class="featured__title row middle">
+        <h1 class="col-6"><?php the_title(); ?></h1>
+        <span class="col-6">By <?php the_author(); ?></span>
     </div>
     <div class="featured__excerpt">
         <?php the_excerpt(); ?>

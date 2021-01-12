@@ -47,47 +47,53 @@
     }
 }
 
-.header__menu .menu {
-    z-index: 10;
-
-    a {
-        @include text-menu;
-    }
-
-    ul > li {
-        margin-right: 10px;
-        // margin-bottom: 13px;
-    }
-
-    li {
-        display: inline-block;
-        position: relative;
+.header__menu {
+    .menu {
+        height: 56px;
+        z-index: 10;
 
         a {
-            margin-bottom: 10px;
+            @include text-menu;
+        }
+
+        ul {
+            height: 100%;
+        }
+
+        ul > li {
+            padding: 0 10px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: box-shadow $transition-time ease-in-out;
 
             &:hover {
-                text-shadow: 0.25px 0 0.1px, -0.25px 0 0.1px;
+                box-shadow: inset 0 56px 0 0.1px $red;
+
+                a { color: $yellow-light; }
             }
-        }
 
-        .sub-menu {
-            left: 0;
-            opacity: 0;
-            min-width: 200px;
-            padding: 10px 30px 13px;
-            position: absolute;
-            transition: opacity $transition-speed;
-            visibility: hidden;
+            .sub-menu {
+                left: 0;
+                opacity: 0;
+                min-width: 200px;
+                padding: 10px 30px 13px;
+                position: absolute;
+                transition: opacity $transition-speed;
+                visibility: hidden;
 
-            li {
-                display: block;
+                li {
+                    display: block;
+                }
             }
-        }
 
-        &.menu-open .sub-menu {
-            opacity: 1;
-            visibility: visible;
+            &.menu-open .sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }

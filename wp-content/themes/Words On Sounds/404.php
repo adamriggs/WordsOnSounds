@@ -5,6 +5,7 @@
         <div class="row">
 
             <div class="col-12 middle center"><h1>404</h1></div>
+            <div class="col-12 middle center"><a href="/">Go Home</a></div>
 
         </div>
     </main>

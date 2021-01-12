@@ -54,7 +54,7 @@
                         'menu' => 'primary',
                         'container' => 'nav',
                         'container_class' => 'menu',
-                        'menu_class' => 'menu',
+                        'menu_class' => 'row',
                     )); 
                 ?>
             </div>
