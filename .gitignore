@@ -29,6 +29,7 @@ wp-content/themes/twentysixteen
 wp-content/plugins/hello.php
 wp-content/plugins/akismet
 wp-content/plugins/nninc-blocks
+wp-content/plugins/all-in-one-wp-migration/storage/*
 ai1wm-backups/
 
 **/dist/hot/*

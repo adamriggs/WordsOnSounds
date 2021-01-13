@@ -62,21 +62,25 @@ get_header(); ?>
                 <?php 
 
                     // global $wp_query;
-                    $big = 999999999; // need an unlikely integer
-                    echo '<div class="paginate-links">';
-                    echo paginate_links( array(
-                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                    'format' => '?paged=%#%',
-                    'prev_text' => __('<<'),
-                    'next_text' => __('>>'),
-                    'current' => max( 1, get_query_var('paged') ),
-                    'total' => $wp_query->max_num_pages
-                    ) );
-                    echo '</div>';
+                    // $big = 999999999; // need an unlikely integer
+                    // echo '<div class="paginate-links">';
+                    // echo paginate_links( array(
+                    // 'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                    // 'format' => '?paged=%#%',
+                    // 'prev_text' => __('<<'),
+                    // 'next_text' => __('>>'),
+                    // 'current' => max( 1, get_query_var('paged') ),
+                    // 'total' => $wp_query->max_num_pages
+                    // ) );
+                    // echo '</div>';
                     // posts_nav_link();
                     // posts_nav_link('&#8734;','Next','Prev');
-                    next_posts_link( 'Older Entries', $catquery->max_num_pages );
-                    previous_posts_link( 'Newer Entries' );
+                ?>
+                    <section class="posts__nav row">
+                        <div class="col-6"><?php next_posts_link( '&laquo; Older Posts', $catquery->max_num_pages ); ?></div>
+                        <div class="col-6 end"><?php previous_posts_link( 'Newer Posts &raquo;' ); ?></div>
+                    </section>
+                <?php
                     $wp_query = null;
                     $wp_query = $tmp_query;
                     wp_reset_postdata();

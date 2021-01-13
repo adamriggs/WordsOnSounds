@@ -73,6 +73,7 @@ p {
     a {
         text-decoration: underline;
         text-decoration-color: $red;
+        transition: color, text-decoration-color $transition-time ease-in-out;
 
         &:hover {
             color: $red;
@@ -82,6 +83,10 @@ p {
 
     img {
         width: auto;
+    }
+
+    iframe {
+        width: 100%;
     }
 }
 
@@ -206,6 +211,16 @@ img.aligncenter {
         &:last-child {
             padding-right: 0;
         }
+    }
+}
+
+.post .featured__excerpt { display: none; }
+
+.posts__nav a {
+    transition: color $transition-time ease-in-out;
+
+    &:hover {
+        color: $red;
     }
 }
 

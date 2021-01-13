@@ -1,13 +1,14 @@
 footer {
     background-color: $white;
     color: $black;
+    margin-top: $spacer-less;
 
     section {
         margin: $spacer-less 0 0 0;
     }
 
     .footer__container {
-        // margin: 0 $spacer;
+        margin-bottom: 15px;
         width: 100%;
     }
 
@@ -25,11 +26,20 @@ footer {
 
         .menu ul li {
             display: inline;
+            margin: 0 5px;
+            transition: color $transition-time ease-in-out;
+
+            &:hover {
+                color: $red;
+            }
         }
     }
 
+    .footer__email img {
+        width: 40px;
+    }
+
     .footer__breadcrumb {
-        // color: $black;
         svg { width: 100px; }
     }
 }

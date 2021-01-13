@@ -53,10 +53,13 @@
                     wp_nav_menu(array(
                         'menu' => 'primary',
                         'container' => 'nav',
-                        'container_class' => 'menu',
+                        'container_class' => 'menu col-9',
                         'menu_class' => 'row',
                     )); 
                 ?>
+                <div class="col-3 end">
+                    <?php include get_template_directory() . '/inc/social.php'; ?>
+                </div>
             </div>
         </div>
 

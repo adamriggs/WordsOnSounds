@@ -2,16 +2,16 @@
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main post" role="main">
-        <h3><?php the_title(); ?></h3>
-        <div class="post__container">
+        <section class="post__container">
+            <?php include get_template_directory() . '/inc/featured.php'; ?>
             <div>
-        		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <?php the_post_thumbnail(); ?>
-        			<?php the_content(); ?>
-        		<?php endwhile; endif; ?>
+                <?php the_content(); ?>
             </div>
-        </div>
-        <?php previous_post_link(); ?>    <?php next_post_link(); ?>
+        </section>
+        <section class="posts__nav row">
+            <div class="col-6"><?php previous_post_link(); ?></div>
+            <div class="col-6 end"><?php next_post_link(); ?></div>
+        </section>
 	</main>
 </div>
 
