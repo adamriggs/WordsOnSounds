@@ -563,6 +563,9 @@ img.aligncenter {
 .post .featured__excerpt {
   display: none; }
 
+.post .post__content {
+  margin: 0 120px; }
+
 .posts__nav a {
   -webkit-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out; }
@@ -580,7 +583,9 @@ img.aligncenter {
 @media only screen and (max-width: 600px) {
   .hero__text {
     margin: 0 auto;
-    padding: 64px 0; } }
+    padding: 64px 0; }
+  .post .post__content {
+    margin: 0; } }
 
 header {
   -webkit-box-align: center;
@@ -600,15 +605,15 @@ header {
     padding: 0;
     text-align: right; }
     header .header__menu__secondary .hamburger {
-      padding: 10px 0; }
+      padding: 10px 0 0; }
   header .hamburger-inner,
   header .hamburger-inner::after,
   header .hamburger-inner::before {
-    background-color: #fff; }
+    background-color: #000; }
   header .hamburger.is-active .hamburger-inner,
   header .hamburger.is-active .hamburger-inner::after,
   header .hamburger.is-active .hamburger-inner::before {
-    background-color: #fff; }
+    background-color: #000; }
   header .header__desktop h1 {
     padding-right: 64px; }
   header .header__mobile {
@@ -617,11 +622,12 @@ header {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
       max-width: 100%; }
+    header .header__mobile .social {
+      text-align: left; }
 
 @media only screen and (max-width: 1064px) {
   header {
-    min-height: none;
-    padding: 0 34px; }
+    min-height: none; }
     header.row {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -635,7 +641,8 @@ header {
     header .header__mobile {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      padding-right: 34px; }
       header .header__mobile h1 a img {
         width: 100%; } }
 
@@ -646,12 +653,14 @@ header {
     font-size: 18px;
     text-transform: uppercase; }
   .header__menu__secondary button {
+    -webkit-clip-path: none;
+            clip-path: none;
     border: 0; }
   .header__menu__secondary button:hover {
     background-color: transparent;
     border: 0; }
   .header__menu__secondary .menu {
-    background-color: #d93837;
+    background-color: #fff;
     opacity: 0;
     padding: 0 32px;
     position: absolute;
@@ -749,6 +758,22 @@ footer {
   footer .footer__breadcrumb svg {
     width: 100px; }
 
+@media only screen and (max-width: 1024px) {
+  footer .footer__top,
+  footer .footer__menu,
+  footer .footer__social {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
+  footer .footer__menu {
+    margin: 34px 0; }
+    footer .footer__menu .menu ul li {
+      display: block;
+      margin: 10px 0;
+      text-align: left; }
+  footer .footer__social {
+    text-align: left; } }
+
 .featured h4 {
   margin: 34px 0 24px; }
 
@@ -764,8 +789,10 @@ footer {
   display: inline-block; }
 
 .post__tile .background-image {
-  height: 310px;
-  margin-bottom: 34px; }
+  background-clip: border-box;
+  background-origin: border-box;
+  margin-bottom: 34px;
+  padding-top: 78%; }
 
 .post__tile h3 {
   text-align: center;
@@ -777,6 +804,25 @@ footer {
 
 .post__row a {
   text-align: right; }
+
+.post__row h4 {
+  margin: 40px 0; }
+
+@media only screen and (max-width: 1024px) {
+  .featured .featured__title h1,
+  .featured .featured__title span {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
+  .featured .featured__title span {
+    padding: 34px 0 0 0; } }
+
+@media only screen and (max-width: 600px) {
+  .post__row.mobile__break .post__tile__container {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 34px; } }
 
 .home .home__secondary h4 {
   margin-bottom: 34px;
@@ -793,4 +839,21 @@ footer {
 
 .home .home__tertiary .home__tertiary__photo {
   padding-right: 34px; }
+
+@media only screen and (max-width: 600px) {
+  .home__secondary__singles > div {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 34px; }
+  .home .home__tertiary .home__tertiary__photo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0; }
+  .home .home__tertiary .home__tertiary__text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 34px; } }
 

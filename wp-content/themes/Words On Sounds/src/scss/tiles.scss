@@ -18,9 +18,11 @@
 
 .post__tile {
     .background-image {
-        height: 310px;
+        background-clip: border-box;
+        background-origin: border-box;
+        // height: 310px;
         margin-bottom: $spacer-less;
-        // padding-bottom: 78%;
+        padding-top: 78%;
     }
 
     h3 {
@@ -33,6 +35,26 @@
     }
 }
 
-.post__row a {
-    text-align: right;
+.post__row a { text-align: right; }
+.post__row h4 { margin: 40px 0; }
+
+@media only screen and (max-width: $tablet-break) {
+    .featured .featured__title {
+        h1,
+        span {
+            @include flex__full;
+        }
+
+        span { padding: $spacer-less 0 0 0; }
+    }
+}
+
+@media only screen and (max-width: $mobile-break) {
+    .post__row.mobile__break {
+        .post__tile__container {
+            @include flex__full;
+
+            margin-bottom: $spacer-less;
+        }
+    }
 }

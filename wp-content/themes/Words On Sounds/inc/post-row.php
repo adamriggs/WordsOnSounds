@@ -11,7 +11,7 @@
     $posts = get_posts($args);
 ?>
 
-<div class="post__row row between">
+<div class="post__row mobile__break row between">
     <div class="row">
         <h4 class="col-6 middle"><?php echo $category_name; ?></h4>
         <a class="col-6 end" href="<?php echo get_category_link($category_id); ?>"><button>More <?php echo $button_name; ?></button></a>
@@ -20,7 +20,7 @@
         foreach($posts as $tmp) {
 
     ?>
-            <div class="post__tile col-3">
+            <div class="post__tile__container col-3">
                 <?php
                     global $post;
                     $post = $tmp;

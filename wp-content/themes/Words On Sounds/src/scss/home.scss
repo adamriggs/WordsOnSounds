@@ -18,3 +18,23 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile-break) {
+    .home__secondary__singles > div {
+        @include flex__full;
+
+        margin-bottom: $spacer-less;
+    }
+
+    .home .home__tertiary .home__tertiary__photo {
+        @include flex__full;
+
+        padding-right: 0;
+    }
+
+    .home .home__tertiary .home__tertiary__text {
+        @include flex__full;
+
+        margin-top: $spacer-less;
+    }
+}

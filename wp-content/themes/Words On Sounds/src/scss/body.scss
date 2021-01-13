@@ -215,6 +215,7 @@ img.aligncenter {
 }
 
 .post .featured__excerpt { display: none; }
+.post .post__content { margin: 0 $spacer-more; }
 
 .posts__nav a {
     transition: color $transition-time ease-in-out;
@@ -243,4 +244,6 @@ img.aligncenter {
         margin: 0 auto;
         padding: $spacer 0;
     }
+
+    .post .post__content { margin: 0; }
 }

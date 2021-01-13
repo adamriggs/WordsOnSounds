@@ -4,7 +4,7 @@
 	<main id="main" class="site-main post" role="main">
         <section class="post__container">
             <?php include get_template_directory() . '/inc/featured.php'; ?>
-            <div>
+            <div class="post__content">
                 <?php the_content(); ?>
             </div>
         </section>

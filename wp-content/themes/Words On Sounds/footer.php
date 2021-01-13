@@ -1,9 +1,5 @@
 <?php
     $email = get_field('email_address', 'option');
-
-    // echo('<pre>');
-    // print_r($email);
-    // echo('</pre>');
 ?>
     <footer class="row">
 
@@ -11,7 +7,9 @@
 
         <section class="footer__container row middle center">
             <div class="footer__top col-3">
-                <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-site.png'; ?>" />
+                <a href="/" title="Words On Sounds">
+                    <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-site.png'; ?>" />
+                </a>
             </div>
             <div class="footer__menu col-6">
                 <?php wp_nav_menu(array(

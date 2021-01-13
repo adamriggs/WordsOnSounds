@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
 
     const hamburger = document.getElementById('hamburger-menu');
-    const mobileMenu = document.getElementById('menu-mobile');
+    const mobileMenu = document.getElementById('menu__mobile');
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('is-active');
         mobileMenu.classList.toggle('show');

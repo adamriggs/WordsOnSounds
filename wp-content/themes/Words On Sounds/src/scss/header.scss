@@ -18,20 +18,20 @@ header {
         text-align: right;
 
         .hamburger {
-            padding: 10px 0;
+            padding: 10px 0 0;
         }
     }
 
     .hamburger-inner,
     .hamburger-inner::after,
     .hamburger-inner::before {
-        background-color: $white;
+        background-color: $black;
     }
 
     .hamburger.is-active .hamburger-inner,
     .hamburger.is-active .hamburger-inner::after,
     .hamburger.is-active .hamburger-inner::before {
-        background-color: $white;
+        background-color: $black;
     }
 
     .header__desktop {
@@ -45,13 +45,17 @@ header {
             flex-basis: 100%;
             max-width: 100%;
         }
+
+        .social {
+            text-align: left;
+        }
     }
 }
 
 @media only screen and (max-width: $menu-break) {
     header {
         min-height: none;
-        padding: 0 $spacer-less;
+        // padding: 0 $spacer-less;
 
         &.row {
             display: flex;
@@ -67,10 +71,15 @@ header {
 
         .header__mobile {
             display: flex;
+            padding-right: $spacer-less;
 
             h1 a img {
                 width: 100%;
             }
+        }
+
+        .social {
+            // padding-left: $spacer-less;
         }
     }
 }

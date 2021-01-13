@@ -46,7 +46,25 @@ footer {
 
 @media only screen and (max-width: $tablet-break) {
     footer {
+        .footer__top,
+        .footer__menu,
+        .footer__social {
+            @include flex__full;
+        }
 
+        .footer__menu {
+            margin: $spacer-less 0;
+
+            .menu ul li {
+                display: block;
+                margin: 10px 0;
+                text-align: left;
+            }
+        }
+
+        .footer__social {
+            text-align: left;
+        }
     }
 }
 

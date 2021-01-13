@@ -64,25 +64,26 @@
         </div>
 
         <div class="header__mobile row bottom">
-            <!-- <div class="col-12"> -->
-                <a class="col-10" href="/" title="#TOYS">
-                    <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-site.png'; ?>" />
-                </a>
-                <div class="header__menu__secondary col-2">
-                    <button id="hamburger-menu" class="hamburger hamburger--spin" type="button">
-                      <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                      </span>
-                    </button>
-                    <?php wp_nav_menu(array(
-                        'menu' => 'primary',
-                        'container' => 'nav',
-                        'container_class' => 'menu',
-                        'menu_class' => 'col-2',
-                        'container_id' => 'menu__mobile'
-                    )); ?>
-                </div>
-            <!-- </div> -->
+            <a class="col-10" href="/" title="Words On Sounds">
+                <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-site.png'; ?>" />
+            </a>
+            <div class="header__menu__secondary col-2">
+                <button id="hamburger-menu" class="hamburger hamburger--spin" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+                <?php wp_nav_menu(array(
+                    'menu' => 'primary',
+                    'container' => 'nav',
+                    'container_class' => 'menu',
+                    'menu_class' => 'col-2',
+                    'container_id' => 'menu__mobile'
+                )); ?>
+            </div>
+            <div class="col-12 start">
+                <?php include get_template_directory() . '/inc/social.php'; ?>
+            </div>
         </div>
     </header>
     

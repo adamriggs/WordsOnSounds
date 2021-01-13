@@ -5,7 +5,10 @@
         @include text-menu-mobile;
     }
 
-    button { border: 0; }
+    button {
+        clip-path: none;
+        border: 0;
+    }
 
     button:hover {
         background-color: transparent;
@@ -13,7 +16,7 @@
     }
 
     .menu {
-        background-color: $red;
+        background-color: $white;
         opacity: 0;
         padding: 0 32px;
         position: absolute;
