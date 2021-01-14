@@ -584,6 +584,10 @@ img.aligncenter {
   .hero__text {
     margin: 0 auto;
     padding: 64px 0; }
+  .category__secondary .col-3 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
   .post .post__content {
     margin: 0; } }
 
@@ -625,7 +629,7 @@ header {
     header .header__mobile .social {
       text-align: left; }
 
-@media only screen and (max-width: 1064px) {
+@media only screen and (max-width: 1164px) {
   header {
     min-height: none; }
     header.row {

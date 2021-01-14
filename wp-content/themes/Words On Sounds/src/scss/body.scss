@@ -245,5 +245,9 @@ img.aligncenter {
         padding: $spacer 0;
     }
 
+    .category__secondary .col-3 {
+        @include flex__full;
+    }
+
     .post .post__content { margin: 0; }
 }
