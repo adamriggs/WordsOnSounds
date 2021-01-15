@@ -103,7 +103,8 @@ section {
     margin: $spacer-less 0 0 0;
 }
 
-button {
+button,
+.search__form__submit {
     background-color: $gray;
     border: 1px solid $white;
     color: $white;

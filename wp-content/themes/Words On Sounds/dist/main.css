@@ -1,6 +1,6 @@
 @font-face {
   font-family: "AcuminVariableConcept";
-  src: url("../src/fonts/AcuminVariableConcept.otf"); }
+  src: url("../src/fonts/BarlowCondensed-Medium.otf"); }
 
 @font-face {
   font-family: "Gothic Bold";
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Gibson Bold";
-  src: url("../src/fonts/gibson-bold.ttf"); }
+  src: url("../src/fonts/GibsonBold.OTF"); }
 
 @font-face {
   font-family: "Kanit-Bold";
@@ -471,7 +471,8 @@ a {
 section {
   margin: 34px 0 0 0; }
 
-button {
+button,
+.search__form__submit {
   background-color: #999;
   border: 1px solid #fff;
   color: #fff;
@@ -487,10 +488,12 @@ button {
   transition: background-color 0.25s, border 0.25s;
   -webkit-clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%); }
-  button:hover {
+  button:hover,
+  .search__form__submit:hover {
     background-color: #d93837;
     border: 1px solid #d93837; }
-  button a {
+  button a,
+  .search__form__submit a {
     font-family: "Gibson Bold", Arial, sans-serif;
     font-size: 18px;
     text-transform: uppercase; }
@@ -731,6 +734,18 @@ header {
     .header__menu .menu li.menu-open .sub-menu {
       opacity: 1;
       visibility: visible; }
+
+.search__form {
+  margin: 34px 0; }
+
+.search__form__submit {
+  margin: 0; }
+
+.search .site-main {
+  margin: 64px 0; }
+
+.search .search-result-count {
+  margin: 34px 0; }
 
 footer {
   background-color: #fff;
