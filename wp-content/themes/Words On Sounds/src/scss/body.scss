@@ -16,12 +16,16 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "AcuminVariableConcept", $font-fallback;
-    font-style: "Condensed Medium";
     font-size: 19px;
     margin: 0 auto;
     max-width: $max-width;
     min-height: 100%;
     overflow-x: hidden;
+}
+
+input {
+    font-family: "AcuminVariableConcept", $font-fallback;
+    font-size: 19px;
 }
 
 .content-area {
@@ -103,8 +107,7 @@ section {
     margin: $spacer-less 0 0 0;
 }
 
-button,
-.search__form__submit {
+button {
     background-color: $gray;
     border: 1px solid $white;
     color: $white;
@@ -241,6 +244,10 @@ img.aligncenter {
 }
 
 @media only screen and (max-width: $mobile-break) {
+    body {
+        margin: 0 5px;
+    }
+
     .hero__text {
         margin: 0 auto;
         padding: $spacer 0;
