@@ -33,7 +33,7 @@
 
 @media only screen and (max-width: $tablet-break) {
     .featured .featured__title {
-        h1,
+        a,
         span {
             @include flex__full;
         }
