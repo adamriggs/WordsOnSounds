@@ -5,23 +5,30 @@
 
         <div class="hr col-12"></div>
 
-        <section class="footer__container row middle center">
-            <div class="footer__top col-3">
+        <section class="footer__container row">
+            <h1 class="col-4 middle">
                 <a href="/" title="Words On Sounds">
                     <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-site.png'; ?>" />
                 </a>
-            </div>
-            <div class="footer__menu col-6">
-                <?php wp_nav_menu(array(
-                    'menu' => 'primary',
-                    'container' => 'nav',
-                    'container_class' => 'menu',
-                    'menu_class' => '',
-                    'container_id' => 'menu__footer'
-                )); ?>
-            </div>
-            <div class="footer__social col-3 end">
-                <?php include get_template_directory() . '/inc/social.php'; ?>
+            </h1>
+            <div class="footer__menu row col-8 middle">
+                <?php 
+                    wp_nav_menu(array(
+                        'menu' => 'primary',
+                        'container' => 'nav',
+                        'container_class' => 'menu col-8',
+                        'menu_class' => 'row',
+                    )); 
+                ?>
+                <div class="footer__buttons footer__buttons__desktop row col-4 end">
+                    <div class="footer__social col-10"><?php include get_template_directory() . '/inc/social.php'; ?><input type="text" class="search__input search__footer"></div>
+                    <div class="footer__search col-2 end"><img class="search__button search__footer" src="<?php echo get_template_directory_uri() . '/images/search.png'; ?>" /><input type="text" class="search__input search__footer"></div>
+                </div>
+
+                <div class="footer__buttons footer__buttons__mobile row col-4 end">
+                    <div class="footer__social row"><?php include get_template_directory() . '/inc/social.php'; ?></div>
+                    <div class="footer__search row"><img class="search__button search__footer" src="<?php echo get_template_directory_uri() . '/images/search.png'; ?>" /><input type="text" class="search__input search__footer"></div>
+                </div>
             </div>
         </section>
 

@@ -5,6 +5,10 @@ footer {
 
     section {
         margin: $spacer-less 0 0 0;
+
+        h1 {
+            padding-right: $spacer-less;
+        }
     }
 
     .footer__container {
@@ -42,28 +46,101 @@ footer {
     .footer__breadcrumb {
         svg { width: 100px; }
     }
+
+    .search__button {
+        cursor: pointer;
+        width: 30px;
+    }
+
+    .footer__buttons {
+        position: relative;
+
+        .search__input {
+            border: 2px solid $white;
+            border-left: 0;
+            border-right: 0;
+            font-size: 19px;
+            padding: 2px;
+            position: absolute;
+            right: 40px;
+            top: 0;
+            width: 0;
+            transition: border-color $transition-time, width $transition-time, padding $transition-time;
+            transition-delay: $transition-time, 0;
+
+            &.show {
+                border: 2px solid $black;
+                padding: 2px;
+                opacity: 1;
+                width: 172px;
+
+                &:focus {
+                    border: 2px solid $red;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+
+        .search__mobile {
+            margin: 0 6px;
+
+            .search__input {
+                margin-left: 12px;
+                padding: 3px 2px;
+                right: auto;
+            }
+        }
+    }
+
+    .footer__search {
+        .search__input { display: none; }
+    }
+
+    .footer__buttons__desktop { display: flex; }
+    .footer__buttons__mobile { display: none; }
 }
 
-@media only screen and (max-width: $tablet-break) {
+@media only screen and (max-width: $menu-break) {
     footer {
         .footer__top,
         .footer__menu,
-        .footer__social {
+        .footer__buttons {
             @include flex__full;
         }
 
         .footer__menu {
-            margin: $spacer-less 0;
-
             .menu ul li {
+                @include flex__full;
+
                 display: block;
                 margin: 10px 0;
                 text-align: left;
             }
         }
 
-        .footer__social {
-            text-align: left;
+        .footer__buttons { text-align: left; }
+        .footer__buttons__desktop { display: none; }
+
+        .footer__buttons__mobile {
+            display: block;
+
+            .search__input {
+                position: initial;
+            }
+        }
+
+        .footer__search {
+            margin-top: 10px;
+
+            .search__button { margin-right: 10px; }
+            .search__input { display: block; }
         }
     }
 }

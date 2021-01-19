@@ -43,31 +43,37 @@
     
     <header class="row">
         <div class="header__desktop row middle col-12">
-            <h1 class="col-5 middle">
+            <h1 class="col-4 middle">
                 <a href="/" title="Words On Sounds">
                     <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-site.png'; ?>" />
                 </a>
             </h1>
-            <div class="header__menu row col-7 middle">
+            <div class="header__menu row col-8 middle">
                 <?php 
                     wp_nav_menu(array(
                         'menu' => 'primary',
                         'container' => 'nav',
-                        'container_class' => 'menu col-9',
+                        'container_class' => 'menu col-8',
                         'menu_class' => 'row',
                     )); 
                 ?>
-                <div class="col-3 end">
-                    <?php include get_template_directory() . '/inc/social.php'; ?>
+                <div class="header__buttons row col-4 end">
+                    <div class="col-10"><?php include get_template_directory() . '/inc/social.php'; ?><input type="text" class="search__input search__header"></div>
+                    <div class="col-2 end"><img class="search__button search__header" src="<?php echo get_template_directory_uri() . '/images/search.png'; ?>" /></div>
                 </div>
             </div>
         </div>
 
-        <div class="header__mobile row bottom">
-            <a class="col-10" href="/" title="Words On Sounds">
+        <div class="header__mobile row middle bottom">
+            <a class="col-12" href="/" title="Words On Sounds">
                 <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-site.png'; ?>" />
             </a>
-            <div class="header__menu__secondary col-2">
+            <div class="header__buttons row col-10 start">
+                <div class=""><?php include get_template_directory() . '/inc/social.php'; ?></div>
+                <div class="search__mobile"><img class="search__button search__header" src="<?php echo get_template_directory_uri() . '/images/search.png'; ?>" /><input type="text" class="search__input search__header"></div>
+
+            </div>
+            <div class="header__menu__secondary col-2 middle end">
                 <button id="hamburger-menu" class="hamburger hamburger--spin" type="button">
                   <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -80,9 +86,6 @@
                     'menu_class' => 'col-2',
                     'container_id' => 'menu__mobile'
                 )); ?>
-            </div>
-            <div class="col-12 start">
-                <?php include get_template_directory() . '/inc/social.php'; ?>
             </div>
         </div>
     </header>

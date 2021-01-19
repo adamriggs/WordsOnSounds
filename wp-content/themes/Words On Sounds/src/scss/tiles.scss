@@ -7,12 +7,8 @@
         margin-bottom: $spacer-less;
         text-transform: uppercase;
 
-        h1 { display: inline-block; }
+        a:hover > h1 { color: $red; }
         span { padding-left: $spacer-less; }
-    }
-
-    .featured__excerpt {
-        p { display: inline-block; }
     }
 }
 
@@ -20,7 +16,6 @@
     .background-image {
         background-clip: border-box;
         background-origin: border-box;
-        // height: 310px;
         margin-bottom: $spacer-less;
         padding-top: 78%;
     }
@@ -30,9 +25,7 @@
         transition: color $transition-time ease-in-out;
     }
 
-    &:hover {
-        h3 { color: $red; }
-    }
+    &:hover h3 { color: $red; }
 }
 
 .post__row a { text-align: right; }

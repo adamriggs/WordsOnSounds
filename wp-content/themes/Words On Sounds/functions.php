@@ -107,30 +107,40 @@ if ( !function_exists('no_orphans') ) {
  * 
  * @return Array $tag_arr
  */
-function wpf13625975_yoast_remove_username_metatag( $tag_arr ) {
+// function wpf13625975_yoast_remove_username_metatag( $tag_arr ) {
   
-  if( isset( $tag_arr['Written by'] ) ) {
-    unset( $tag_arr['Written by'] );
-  }
+//   if( isset( $tag_arr['Written by'] ) ) {
+//     unset( $tag_arr['Written by'] );
+//   }
   
-  return $tag_arr;
+//   return $tag_arr;
   
-}
-add_filter( 'wpseo_enhanced_slack_data', 'wpf13625975_yoast_remove_username_metatag' );
+// }
+// add_filter( 'wpseo_enhanced_slack_data', 'wpf13625975_yoast_remove_username_metatag' );
 
 // disable the gutenburg editor
 add_filter('use_block_editor_for_post', '__return_false', 10);
 
 // excerpt more
-function mytheme_custom_excerpt_length( $length ) {
-    return 43;
-}
-add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+// function mytheme_custom_excerpt_length( $length ) {
+//     return 43;
+// }
+// add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 
 function new_excerpt_more($more) {
-    return ' <a href="' . get_permalink() . '">Read more</a>';
+    // return ' <a href="' . get_permalink() . '">Read more</a>';
+    return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function winwar_first_sentence( $string ) {
+ 
+    $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
+    $part1 = isset($sentence['0']) ? $sentence['0'] : '';
+    $part2 = isset($sentence['1']) ? $sentence['1'] : '';
+    return $part1 . $part2;
+ 
+} add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
 
 //
 

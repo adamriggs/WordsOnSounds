@@ -1,25 +1,27 @@
 .search__form {
-    margin: $spacer-less 0;
+    margin: 0;
 }
 
 .search__form__input {
     border: 2px solid $red;
+    display: none;
 }
 
 .search__form__submit {
     background-color: transparent;
     background-image: url('../images/search.png');
+    background-position: bottom center;
     background-size: contain;
     border: none;
     cursor: pointer;
     height: auto;
-    margin: 0 0 0 12px;
+    margin: 0;
     padding: 0;
     width: 25px;
 }
 
 .search {
-    h4:hover{
+    h4:hover {
         color: $black;
     }
 
@@ -31,7 +33,22 @@
         margin: $spacer-less 0;
     }
 
+    .search__form {
+        margin: $spacer-less 0;
+    }
+
     .search__form__input {
         border: 2px solid $black;
+        display: block;
+
+        &:focus {
+            border: 2px solid $red;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .search__form__submit {
+        margin: 0 0 0 12px;
     }
 }

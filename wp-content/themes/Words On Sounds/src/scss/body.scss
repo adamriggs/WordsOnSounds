@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "AcuminVariableConcept", $font-fallback;
-    font-size: 19px;
+    font-size: 20px;
     margin: 0 auto;
     max-width: $max-width;
     min-height: 100%;
@@ -25,7 +25,7 @@ body {
 
 input {
     font-family: "AcuminVariableConcept", $font-fallback;
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .content-area {
@@ -36,6 +36,7 @@ h1 {
     font-family: "Gibson Bold", $font-fallback;
     font-size: 56px;
     text-transform: uppercase;
+    transition: color $transition-time ease-in-out;
 }
 
 h2 {
@@ -60,7 +61,7 @@ h4 {
 
 p,
 a {
-    font-size: 19px;
+    font-size: 20px;
 
     strong {
         font-weight: 800;
@@ -218,6 +219,10 @@ img.aligncenter {
     }
 }
 
+.category__post__row {
+    margin-bottom: $spacer-less;
+}
+
 .post .featured__excerpt { display: none; }
 .post .post__content { margin: 0 $spacer-more; }
 
@@ -226,6 +231,12 @@ img.aligncenter {
 
     &:hover {
         color: $red;
+    }
+}
+
+@media only screen and (max-width: $max-width) {
+    body {
+        margin: 0 5px;
     }
 }
 
@@ -244,10 +255,6 @@ img.aligncenter {
 }
 
 @media only screen and (max-width: $mobile-break) {
-    body {
-        margin: 0 5px;
-    }
-
     .hero__text {
         margin: 0 auto;
         padding: $spacer 0;
