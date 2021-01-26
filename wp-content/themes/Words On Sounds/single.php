@@ -4,9 +4,9 @@
 	<main id="main" class="site-main post" role="main">
         <section class="post__container">
             <?php include get_template_directory() . '/inc/featured.php'; ?>
-            <div class="post__content">
+            <section class="post__content">
                 <?php the_content(); ?>
-            </div>
+            </section>
         </section>
         <section class="posts__nav row">
             <div class="col-6"><?php previous_post_link(); ?></div>

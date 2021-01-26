@@ -167,3 +167,10 @@ function custom_pre_get_posts($query) {
 }
 
 add_action('pre_get_posts', 'custom_pre_get_posts');
+
+add_filter('the_content', function( $content ){
+    //--Remove all inline styles--
+    $content = preg_replace('/ style=("|\')(.*?)("|\')/','',$content);
+    // $content = preg_replace('/ dir=("|\')(.*?)("|\')/','',$content);
+    return $content;
+}, 20);
